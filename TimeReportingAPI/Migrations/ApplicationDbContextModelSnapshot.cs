@@ -36,7 +36,7 @@ namespace TimeReportingAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("TimeReportingAPI.Data.Project", b =>
@@ -58,7 +58,7 @@ namespace TimeReportingAPI.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Project");
                 });
 
             modelBuilder.Entity("TimeReportingAPI.Data.TimeAndDate", b =>
@@ -94,13 +94,13 @@ namespace TimeReportingAPI.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("TimesAndDates");
+                    b.ToTable("TimeAndDate");
                 });
 
             modelBuilder.Entity("TimeReportingAPI.Data.Project", b =>
                 {
                     b.HasOne("TimeReportingAPI.Data.Customer", null)
-                        .WithMany("Projects")
+                        .WithMany("Project")
                         .HasForeignKey("CustomerId");
                 });
 
@@ -125,7 +125,7 @@ namespace TimeReportingAPI.Migrations
 
             modelBuilder.Entity("TimeReportingAPI.Data.Customer", b =>
                 {
-                    b.Navigation("Projects");
+                    b.Navigation("Project");
                 });
 #pragma warning restore 612, 618
         }

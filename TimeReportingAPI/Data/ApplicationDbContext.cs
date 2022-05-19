@@ -9,8 +9,8 @@ namespace TimeReportingAPI.Data
         {
         }
 
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Project> Projects { get; set; }
-        public DbSet<TimeAndDate> TimesAndDates { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Project> Project { get; set; }
+        public DbSet<TimeAndDate> TimeAndDate { get; set; }
     }
 }

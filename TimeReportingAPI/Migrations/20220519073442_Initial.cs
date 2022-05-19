@@ -10,7 +10,7 @@ namespace TimeReportingAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Customers",
+                name: "Customer",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace TimeReportingAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Projects",
+                name: "Project",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -37,12 +37,12 @@ namespace TimeReportingAPI.Migrations
                     table.ForeignKey(
                         name: "FK_Projects_Customers_CustomerId",
                         column: x => x.CustomerId,
-                        principalTable: "Customers",
+                        principalTable: "Customer",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "TimesAndDates",
+                name: "TimeAndDate",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -60,43 +60,43 @@ namespace TimeReportingAPI.Migrations
                     table.ForeignKey(
                         name: "FK_TimesAndDates_Customers_CustomerId",
                         column: x => x.CustomerId,
-                        principalTable: "Customers",
+                        principalTable: "Customer",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TimesAndDates_Projects_ProjectId",
                         column: x => x.ProjectId,
-                        principalTable: "Projects",
+                        principalTable: "Project",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Projects_CustomerId",
-                table: "Projects",
+                table: "Project",
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TimesAndDates_CustomerId",
-                table: "TimesAndDates",
+                table: "TimeAndDate",
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TimesAndDates_ProjectId",
-                table: "TimesAndDates",
+                table: "TimeAndDate",
                 column: "ProjectId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TimesAndDates");
+                name: "TimeAndDate");
 
             migrationBuilder.DropTable(
-                name: "Projects");
+                name: "Project");
 
             migrationBuilder.DropTable(
-                name: "Customers");
+                name: "Customer");
         }
     }
 }
