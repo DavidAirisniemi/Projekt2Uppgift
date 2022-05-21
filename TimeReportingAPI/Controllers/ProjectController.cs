@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TimeReportingAPI.Data;
-using TimeReportingAPI.DTO.CustomersDTO;
 using TimeReportingAPI.DTO.ProjectsDTO;
 
 namespace TimeReportingAPI.Controllers

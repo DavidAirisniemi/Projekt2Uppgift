@@ -1,5 +1,4 @@
-﻿using TimeReportingAPI.Data;
-using TimeReportingAPI.DTO.ProjectsDTO;
+﻿using TimeReportingAPI.DTO.ProjectsDTO;
 
 namespace TimeReportingAPI.DTO.CustomersDTO
 {

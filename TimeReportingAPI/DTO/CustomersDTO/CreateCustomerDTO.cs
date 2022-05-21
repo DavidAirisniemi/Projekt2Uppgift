@@ -1,6 +1,4 @@
-﻿using TimeReportingAPI.Data;
-
-namespace TimeReportingAPI.DTO.CustomersDTO
+﻿namespace TimeReportingAPI.DTO.CustomersDTO
 {
     public class CreateCustomerDTO
     {

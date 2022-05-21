@@ -1,10 +1,9 @@
-﻿using TimeReportingAPI.Data;
-using TimeReportingAPI.DTO.CustomersDTO;
+﻿using TimeReportingAPI.DTO.CustomersDTO;
 using TimeReportingAPI.DTO.ProjectsDTO;
 
-namespace TimeReportingAPI.DTO.TimeAndDateDTO
+namespace TimeReportingAPI.DTO.TimesAndDatesDTO
 {
-    public class CreateTimeAndDateDTO
+    public class UpdateTimeAndDateDTO
     {
         public DateTime Date { get; set; }
         public int AmountOfHours { get; set; }
