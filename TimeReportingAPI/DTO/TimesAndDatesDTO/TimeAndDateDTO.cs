@@ -2,8 +2,9 @@
 
 namespace TimeReportingAPI.DTO.TimesAndDatesDTO
 {
-    public class UpdateTimeAndDateDTO
+    public class TimeAndDateDTO
     {
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public int AmountOfHours { get; set; }
         public int AmountOfMinutes { get; set; }

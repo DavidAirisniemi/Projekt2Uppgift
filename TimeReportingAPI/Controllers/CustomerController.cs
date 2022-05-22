@@ -25,7 +25,6 @@ namespace TimeReportingAPI.Controllers
             var customer = _context.Customer.FirstOrDefault(customer => customer.Id == id);
             if (customer == null) return NotFound();
 
- 
             customer.Name = updateCustomerDto.Name;
 
             _context.SaveChanges();
@@ -46,7 +45,7 @@ namespace TimeReportingAPI.Controllers
             var customerDto = new CustomerDTO
             {
                 Id = customer.Id,
-                Name = customer.Name,
+                Name = customer.Name
             };
             return CreatedAtAction(nameof(GetOne), new { id = customer.Id }, customerDto);
         }
@@ -73,11 +72,11 @@ namespace TimeReportingAPI.Controllers
             {
                 Id = customer.Id,
                 Name = customer.Name,
-                Projects = customer.Projects.Select(customer => new ProjectDTO
+                Projects = customer.Projects.Select(project => new ProjectDTO
                 {
-                    Id = customer.Id,
-                    Name = customer.Name
-                }).ToList(),
+                    Id = project.Id,
+                    Name = project.Name
+                }).ToList()
             };
             return Ok(customerDto);
         }

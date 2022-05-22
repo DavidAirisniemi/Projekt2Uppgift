@@ -1,5 +1,4 @@
-﻿using TimeReportingAPI.DTO.CustomersDTO;
-using TimeReportingAPI.DTO.ProjectsDTO;
+﻿using TimeReportingAPI.Data;
 
 namespace TimeReportingAPI.DTO.TimesAndDatesDTO
 {
@@ -9,7 +8,7 @@ namespace TimeReportingAPI.DTO.TimesAndDatesDTO
         public int AmountOfHours { get; set; }
         public int AmountOfMinutes { get; set; }
         public string Description { get; set; }
-        public CustomerDTO Customer { get; set; }
-        public ProjectDTO Project { get; set; }
+        public Customer Customer { get; set; }
+        public Project Project { get; set; }
     }
 }

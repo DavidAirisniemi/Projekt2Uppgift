@@ -44,7 +44,7 @@ namespace TimeReportingAPI.Controllers
             var projectDto = new ProjectDTO
             {
                 Id = project.Id,
-                Name = project.Name,
+                Name = project.Name
             };
             return CreatedAtAction(nameof(GetOne), new { id = project.Id }, projectDto);
         }
